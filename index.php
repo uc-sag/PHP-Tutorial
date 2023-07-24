@@ -1,48 +1,35 @@
 <?php
-// Integers
-$x = 10;
-$y = 0x10;  //hexa decimal no.
-$z = 010;  //Octal  no.
-$a = 0b10;  //Binary  no.
+// Float Data Type
+$x = 13.5e3;
+echo $x ,'<br/>';
+
+$x = 13.5e-3;
+echo $x ,'<br/>';
+
+$y = 13_000.05;
+echo $y ,'<br/>';
 
 
+echo PHP_FLOAT_MAX,'<br/>';
 
-echo $x;
+$x = floor((0.1+0.3)*10);
+echo $x ,'<br/>';
+
+$x = ceil((0.1+0.2)*10);
+echo $x ,'<br/>';
+
+
+$x = 0.23;
+$y = 1-0.77;
+var_dump($x,$y);
+if($x == $y){
+    echo "Yes";
+
+}
+else{
+    echo " No";
+}
 echo '<br/>';
-echo $y;
-echo '<br/>';
-echo $z;
-echo '<br/>';
-echo $a;
+echo PHP_FLOAT_MAX *2 ,'<br/>';
 
-$temp = PHP_INT_MAX;
-echo '<br/>';
-echo $temp;
-echo '<br/>';
-var_dump($temp);
-echo '<br/>';
-var_dump($temp+1);
-
-echo '<br/>';
-echo is_int($temp);
-
-echo '<br/>';
- $temp = 2000_000_00;
- var_dump($temp);
-
- echo '<br/>';
- echo $temp;
-
- echo '<br/>';
- $temp = '200_000_00';   //it will be casted as string
- var_dump($temp);
-
-
- echo '<br/>';
- $temp = (int)'200_000_00';   //it will 200 only
- var_dump($temp);
-
-
-
- 
 ?>
