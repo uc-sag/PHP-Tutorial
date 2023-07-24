@@ -1,26 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP</title>
-</head>
-<body>
-    <?= 'Hello world'?>
-    <?php
-    # single line comment
-    //single line comment
-    /*
-
-     Multiline comment
-
-
-
-    */
-    ?>
-</body>
-</html>
 <?php
+declare(strict_types =1);
 /**********************************************************
  * 
  * 
@@ -72,5 +51,51 @@ echo " ", $y;   // it will print 40;
 
 
 *************************************************/
+// Typecasting Overview
+
+$completed = true;
+$quantity = 4;
+$price = 6.98;
+$name = 'sagar';
+
+echo $completed . '<br/>';
+echo $quantity . '<br/>';
+echo $price . '<br/>';
+echo $name . '<br/>';
+
+echo gettype($completed), '<br/>' ;
+echo gettype($quantity) ,'<br/>';
+echo gettype($price),'<br/>' ;
+echo gettype($name) ,'<br/>';
+
+var_dump($name);
+
+#Compound Types
+$companies = ['one','two','three',55,89];
+print_r($companies);
+
+
+// function sum($x,$y){
+//     var_dump($x);
+//     var_dump($y);
+//     return $x +$y;
+// }
+
+// // echo sum(2,3);
+// echo sum ('2',3);
+// echo sum ('3.5',3);
+
+function sum2(int $x, int $y){
+    var_dump($x);
+    var_dump($y);
+    return $x +$y;
+}
+echo sum2('3',5);
+
+
+// after enabling declare(strict_types =1);
+echo sum2('2',4);  // it will give error
+
+
 
 ?>
