@@ -1,35 +1,40 @@
 <?php
-// Float Data Type
-$x = 13.5e3;
-echo $x ,'<br/>';
-
-$x = 13.5e-3;
-echo $x ,'<br/>';
-
-$y = 13_000.05;
-echo $y ,'<br/>';
+// String Data Type Heredoc and Nowdoc
+$firstName = 'sagar';
+$lastName = "$firstName gupta";   // same as $lastName = "{$firstName} gupta";  
 
 
-echo PHP_FLOAT_MAX,'<br/>';
+echo $firstName , '<br/>';
+echo $lastName , '<br/>';
 
-$x = floor((0.1+0.3)*10);
-echo $x ,'<br/>';
+echo $lastName[2] , '<br/>';
+echo $lastName[-2] , '<br/>';
 
-$x = ceil((0.1+0.2)*10);
-echo $x ,'<br/>';
-
-
-$x = 0.23;
-$y = 1-0.77;
-var_dump($x,$y);
-if($x == $y){
-    echo "Yes";
-
-}
-else{
-    echo " No";
-}
+$lastName[15] = 'x';
+var_dump($lastName) ;
 echo '<br/>';
-echo PHP_FLOAT_MAX *2 ,'<br/>';
+
+$name = $firstName.' '.$lastName;
+echo $name , '<br/>';   
+
+#Heredoc
+$text = <<<TEXT
+    Line1 $name
+ Line2 $firstName
+ Line3  ' ' "
+TEXT;
+
+echo nl2br($text);    
+echo  '<br/>';  
+#Nowdoc
+$text = <<<'TEXT'
+ Line1 $name
+ Line2 $firstName
+ Line3  ' " ' ' ' "
+TEXT;
+
+echo nl2br($text);      
+echo  '<br/>';  
+
 
 ?>
