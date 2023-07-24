@@ -1,40 +1,17 @@
 <?php
-// String Data Type Heredoc and Nowdoc
-$firstName = 'sagar';
-$lastName = "$firstName gupta";   // same as $lastName = "{$firstName} gupta";  
+// PHP NULL
 
+// var_dump($x);
 
-echo $firstName , '<br/>';
-echo $lastName , '<br/>';
+$x = 123;
+var_dump($x);
+unset($x);
+var_dump($x);
 
-echo $lastName[2] , '<br/>';
-echo $lastName[-2] , '<br/>';
-
-$lastName[15] = 'x';
-var_dump($lastName) ;
-echo '<br/>';
-
-$name = $firstName.' '.$lastName;
-echo $name , '<br/>';   
-
-#Heredoc
-$text = <<<TEXT
-    Line1 $name
- Line2 $firstName
- Line3  ' ' "
-TEXT;
-
-echo nl2br($text);    
-echo  '<br/>';  
-#Nowdoc
-$text = <<<'TEXT'
- Line1 $name
- Line2 $firstName
- Line3  ' " ' ' ' "
-TEXT;
-
-echo nl2br($text);      
-echo  '<br/>';  
-
+$y = null;
+var_dump((bool)$y);
+var_dump((int)$y);
+var_dump((string)$y);
+var_dump((array)$y);
 
 ?>
