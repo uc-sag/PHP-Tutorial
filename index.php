@@ -1,29 +1,15 @@
 <?php
-// PHP Switch Statement
-$status ='paid';
+// PHP Match Expression
+$status = 9;
 
-switch($status){
-    case 'paid':
-        echo "Payment Done",'<br/>';
-        break;                       // break 2    => it shows that we come out upto two levelof loop
-    case 'pending':
-        echo "Pending",'<br/>';
-        break;
-    default:
-        echo "Not decided",',br/>';
-}
+$res = match($status){           // the match expression does strict check while switch does not
+    1 =>'paid',
+    2,3 =>'Not paid',
+    0 =>'Pending',
+    default=>'Not confirm'
+};
 
-for($k=0;$k<3;$k++){
-
-    for($i=0;$i<3;$i++){
-        for($j=0;$j<5;$j++){
-            echo $i,'<br/>';
-            break 3;
-        }
-    }
-}
-
-
+echo $res,'<br/>';
 
 
 
