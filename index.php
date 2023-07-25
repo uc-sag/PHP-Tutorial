@@ -1,30 +1,10 @@
 <?php
-require 'foo.php';
-// Return Declare Tick
-// function Sum($x,$y){
-//     return $x+ $y;
-// }
-// echo Sum(2,3),'<br/>';
+// How to include files in php
+require 'file.php';          //include will return warning if file is not found but require return error and stop excution of script
 
-// declare -Tick
-// function onTick(){
-//     echo 'Tick <br/>';
-// }
-// register_tick_function('onTick');
-// declare(ticks = 3);
+require_once 'file.php';      //it include only one time
 
-// $i=0;
-// $length=10;
 
-// while($i< $length){
-//    echo $i.'<br/>';
-//    $i++;
-// }
- 
-// declare(strict_types =1);         
-// function Sum(int $x,int $y){
-//     return $x+ $y;
-// }
-echo Sum('2',3),'<br/>';      
-
+$x = include 'file2.php';
+var_dump($x);
 ?>
