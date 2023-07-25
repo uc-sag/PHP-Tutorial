@@ -1,33 +1,29 @@
 <?php
-// Loops Break Continue
+// PHP Switch Statement
+$status ='paid';
 
-$x = 10;
-while($x > 4){
-    echo $x ,'<br/>';
-    $x--;
-}
-echo 'do while loop','<br/>';
-do{
-    echo $x,'<br/>';
-    $x++;
-}while($x<6);
-
-$arr = ['c++','java','C#'];
-
-for($i = 0;$i<count($arr); $i++){
-    echo $arr[$i],'<br/>';
+switch($status){
+    case 'paid':
+        echo "Payment Done",'<br/>';
+        break;                       // break 2    => it shows that we come out upto two levelof loop
+    case 'pending':
+        echo "Pending",'<br/>';
+        break;
+    default:
+        echo "Not decided",',br/>';
 }
 
+for($k=0;$k<3;$k++){
 
-foreach($arr as $val)
-{
-   echo $val,'<br/>';
+    for($i=0;$i<3;$i++){
+        for($j=0;$j<5;$j++){
+            echo $i,'<br/>';
+            break 3;
+        }
+    }
 }
 
-$arr = ['a'=>1,'b'=>2,'c'=>3];
-foreach($arr as $key => $val){
-    echo $key,':',$val,'<br/>';
-}
+
 
 
 
