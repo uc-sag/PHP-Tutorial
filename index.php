@@ -1,20 +1,36 @@
 <?php
-// Control Structures(if/else)
+// Loops Break Continue
 
-$score = 100;
+$x = 10;
+while($x > 4){
+    echo $x ,'<br/>';
+    $x--;
+}
+echo 'do while loop','<br/>';
+do{
+    echo $x,'<br/>';
+    $x++;
+}while($x<6);
 
-if($score > 60)
-{
-    echo "1st Div",'<br/>';
+$arr = ['c++','java','C#'];
+
+for($i = 0;$i<count($arr); $i++){
+    echo $arr[$i],'<br/>';
 }
-else if($score > 33)
+
+
+foreach($arr as $val)
 {
-    echo "2nd Div",'<br/>';
+   echo $val,'<br/>';
 }
-else
-{
-    echo "Fail",'<br/>'; 
+
+$arr = ['a'=>1,'b'=>2,'c'=>3];
+foreach($arr as $key => $val){
+    echo $key,':',$val,'<br/>';
 }
+
+
+
 
 
 ?>
