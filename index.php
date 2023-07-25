@@ -1,71 +1,49 @@
 <?php
 //OPERATORS
-#Arithmetic operators
-$x = 10;
-$y =2;
+#Error control Operators
+$x = @file('foo.txt');
 
-var_dump($x-$y);
-echo '<br/>';
-$z = '20';
-var_dump($z);
-var_dump(+$z);
-
-$x = 10;
-$y =0;
-// var_dump($x/$y);  //it will give error
-var_dump(fdiv($x,$y));
-
-$x = 10.5;
-$y = 3.5;
-
-var_dump($x % $y);   //$x and $y will be casted into int
-
-
-var_dump(fmod($x,$y));
-
-#Assignment operator
+#Increment and Decrement Operator
 $x = 5;
+echo ++$x ,'<br/>';
+echo --$x ,'<br/>';
 
-$x += 10;
-echo $x;
-echo '<br/>';
+$x = null;
+echo --$x ,'<br/>';
+echo ++$x ,'<br/>';
 
-#String operators
-$x = 'Hello';
-$x .= ' World';
-echo $x;
-echo '<br/>';
-#Comparison operators
-$x = 5;
-$y ='5';
-var_dump($x == $y);
-var_dump($x===$y);
-var_dump($x != $y);
-var_dump($x !==$y);
+#Logical 
+$x = 1;
+$y = 0;
+var_dump($x || $y);
+var_dump($x or $y);
+var_dump($x and $y);
+var_dump($x && $y);
 
-var_dump($x >$y);
-var_dump($x < $y);
-var_dump($x <= $y);
-var_dump($x >= $y);
-$z = 2;
-var_dump($x <=> $z);
-
-$str1 = 'abc';
-$str2 = 'abc';
-
-var_dump($str1 === $str2);
-
-$y = strpos($str1,'b');
-if($y == false){
-    echo "Not found";
-}
-else{
-    echo $y;
+#Short Circuiting
+function Hii(){
+    echo "Hii";
+    return true;
 }
 
-$z =  $y  == false ? 'yes':'No';
-echo $z;
+var_dump($x || Hii());
 
+
+// Bitwise Operatorf 
+$x = 6;
+$y =3;
+var_dump($x & $y);
+
+// Array Operators
+$x = ['a','b','c','d'];
+$y = ['e','f','g','h','i','j'];
+$z = $x +$y;
+print_r($z);
+
+$x = ['a'=>1,'b'=>2,'c'=>3,'d'=>4];
+$y = ['e'=>1,'f'=>3,'g'=>3];
+$z = $x +$y;
+print_r($z);
 
 
 ?>
