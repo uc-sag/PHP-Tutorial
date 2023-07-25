@@ -1,13 +1,7 @@
 <?php
-// How To Work With PHPs Configuration File - PHP.INI
-
-
-//error_reporting, error_log ,display_errors
-
-var_dump(ini_get('error_reporting'));
-var_dump(ini_get('memory_limit'));
-ini_set('display_errors',0);
-ini_set('max_execution_time',35);        //default 30 sec
-var_dump(E_ALL); 
+// PHP Error Handling & Error Handlers
+error_reporting(0);    //it will not show errors
+error_reporting(E_ALL);    //it will show all errors including warning
+error_reporting(E_ALL & ~E_WARNING);    //it will show all errors except warning
 
 ?>
