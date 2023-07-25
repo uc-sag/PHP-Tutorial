@@ -1,21 +1,20 @@
 <?php
-// PHP Operator Precedance & Associativity
-$x = 5+ 3* 2;
+// Control Structures(if/else)
 
-echo $x ,'<br/>';
+$score = 100;
 
-$x = 3;
-$y =7;
-$z = 2;
-$res = $x < $y;
-echo $res ,'<br/>';
-
-$x = true;
-$y =false;
-$z = true;
-var_dump($x && $y || $z);
-
-
+if($score > 60)
+{
+    echo "1st Div",'<br/>';
+}
+else if($score > 33)
+{
+    echo "2nd Div",'<br/>';
+}
+else
+{
+    echo "Fail",'<br/>'; 
+}
 
 
 ?>
