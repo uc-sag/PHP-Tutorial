@@ -1,18 +1,30 @@
 <?php
-// PHP Match Expression
-$status = 9;
+require 'foo.php';
+// Return Declare Tick
+// function Sum($x,$y){
+//     return $x+ $y;
+// }
+// echo Sum(2,3),'<br/>';
 
-$res = match($status){           // the match expression does strict check while switch does not
-    1 =>'paid',
-    2,3 =>'Not paid',
-    0 =>'Pending',
-    default=>'Not confirm'
-};
+// declare -Tick
+// function onTick(){
+//     echo 'Tick <br/>';
+// }
+// register_tick_function('onTick');
+// declare(ticks = 3);
 
-echo $res,'<br/>';
+// $i=0;
+// $length=10;
 
-
-
-
+// while($i< $length){
+//    echo $i.'<br/>';
+//    $i++;
+// }
+ 
+// declare(strict_types =1);         
+// function Sum(int $x,int $y){
+//     return $x+ $y;
+// }
+echo Sum('2',3),'<br/>';      
 
 ?>
