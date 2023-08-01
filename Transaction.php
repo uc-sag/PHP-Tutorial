@@ -1,20 +1,41 @@
 <?php
-declare(strict_types =1);
 class Transaction
 {
-   public const STATUS_PAID = 'paid';
-   public const STATUS_PENDING = 'pending';
-   public const STATUS_DECLINED = 'declined';
+    private float $amount;
+    // private $amount;
+    private string $description;
 
-   public static int $count =0;
+    public function  __construct(float $amount,string $description)
+    {
+        $this->amount = $amount;
+        $this->description= $description;
+    }
+    public function addTax(float $rate)
+    {
+        $this->amount += $this->amount * $rate /100;
+    }
+    public function applyDiscount(float $rate)
+    {
+        $this->amount -= $this->amount *$rate /100;
+    }
+    public function getAmount():float
+    {
+        return $this->amount;
+    }
+    public function __destruct()
+    {
+        echo "Destructor called";
+   
+    }
 
-   public function __construct()
-   {
-     var_dump(self::STATUS_PAID);
-     self::$count++;
-   }
-
-    
 }
-
+class Abc
+{
+    public function __destruct()
+    {
+       
+        echo "ABC Destructor called";
+     
+    }
+}
 ?>
